@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .Header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px 50px;
+      border-bottom: 1px solid #ddd;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 80px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      z-index: 100;
+    }
+    
+    .Links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .LL {
+      margin-right: auto; 
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    
+    .LR {
+      display: flex;
+      gap: 30px;
+    }
+
+    .LS {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }    
+    
+    .Links a {
+      text-decoration: none;
+      white-space: nowrap; 
+      color: #333;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+    
+    .Links a:hover {
+      color: #87CEFA;
+    }
+
+    .Content {
+      background-color: #e9dbcf;
+      min-height: calc(100vh - 80px);
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .Content h2 {
+      color: #333;
+      font-size: 2.5rem;
+      margin: 0 0 20px 0;
+    }
+    
+    /* Optional: Add some sample project styling */
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      padding: 20px;
+    }
+    
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 800px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Header">
+    <img src="LS.jpg" class="LS" alt="Logo">
+    <div class="Links">
+      <a href="AM.html" class="LL"><b>Omolade Oshinubi</b> / Fashion Designer</a>
+      <div class="LR">
+        <a href="AM.html">About Me</a>
+        <a href="R.html">Resume</a>
+        <a href="P.html">Projects</a>
+        <a href="C.html">Contacts</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="Content">
+     <h2>Projects</h2>
+     <div class="projects-container">
+       <div class="project-card">
+         <h3>Fashion Collection 2023</h3>
+         <p>Contemporary African designs showcasing sustainable materials</p>
+       </div>
+       <div class="project-card">
+         <h3>Lekki Fashion Academy</h3>
+         <p>Educational program for aspiring fashion designers</p>
+       </div>
+       <div class="project-card">
+         <h3>Philanthropic Initiative</h3>
+         <p>Community program supporting local artisans</p>
+       </div>
+     </div>
+  </div>
+</body>
+</html>
