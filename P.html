@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style> 
+  <style>    
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      }   
+      color: #333;
+    }
+
     .Header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
       padding: 20px 50px;
-      border: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
       position: fixed;
       top: 0;
       left: 0;
       height: 80px;
       background-color: #ffffff;
-      box-sizing: border-box; 
+      box-sizing: border-box;
+      z-index: 100;
     }
-
     
     .Links {
       display: flex;
@@ -32,6 +34,7 @@
     .LL {
       margin-right: auto; 
       font-size: 1.4rem;
+      font-weight: bold;
     }
     
     .LR {
@@ -40,23 +43,165 @@
     }
 
     .LS {
-      width: 15px;
-      height: 15px:
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
     }    
+    
     .Links a {
       text-decoration: none;
       white-space: nowrap; 
       color: Black;
+      transition: color 0.3s;
+      font-weight: 500;
     }
-    .Links a:hover{
+    
+    .Links a:hover {
       color: #87CEFA;
+    }
+
+    .Content {
+      background-color: #e9dbcf;
+      min-height: calc(100vh - 80px);
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .Content h2 {
+      color: #333;
+      font-size: 2.5rem;
+      margin: 0 0 40px 0;
+    }
+        
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 70px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project-card {
+      background: white;
+      padding: 25px;
+      padding-bottom: 30px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 750px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      text-align: left;
+    }
+    
+    .project-title {
+      width: 60%;
+      font-weight: bold;
+      font-size: 1rem;
+      padding-right: 20px;
+      border-right: 1px solid #eee;
+    }
+    
+    .project-title .name {
+      color: #0039a6;
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .project-title .role {
+      font-size: 0.8rem;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+   .project-title .des{
+      font-size: 1rem;
+      display: block;
+      margin-top: 45px;
+    }
+    
+    .project-image {
+  width: 50%; /* Takes the other half of the card */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.project-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Fill space without stretching */
+  border-radius: 4px; /* Optional: slight rounding */
+}
+    
+    .download-cv {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #1E90FF;
+      text-decoration: none;
+      border: 2px solid #1E90FF;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+    
+    .download-cv:hover {
+      background-color: #1E90FF;
+      color: white;
+    }
+    
+    /* New styles for skills section */
+    .skills-card {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 650px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .skill-category {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .skill-category h3 {
+      color: #1E90FF;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+    
+    .skill-item {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .skill-item:before {
+      content: "•";
+      color: #1E90FF;
+      position: absolute;
+      left: 0;
     }
   </style>
 </head>
 
 <body>
   <div class="Header">
-    <img src="LS.jpg" class="LS">
+    <img src="LS.jpg" class="LS" alt="Logo">
     <div class="Links">
       <a href="index.html" class="LL"><b>Omolade Oshinubi</b> / Fashion Designer</a>
       <div class="LR">
@@ -68,6 +213,57 @@
     </div>
   </div>
   
-  
+  <div class="Content">
+    <h2>Projects</h2>
+    <p>Key Projects</p>
+      
+      <div class="projects-container">
+        <div class="project-card">
+          <div class="project-title">
+            <span class="name">Nigeria Olympic Outfits – 2022 & 2024</span>
+            <span class="role">Garment Development & Production Lead</span>
+            <span class="des">Managed production of Nigeria’s Olympic outfits, designed by Amen and Amen in partnership with Actively Black. Led garment development, quality control, and timely delivery for global showcase.</span>
+          </div>
+          <div class="project-image">
+             <img src="AB.jpg">           
+          </div>
+        </div>
+                
+        <div class="project-card">
+          <div class="project-title">
+            <span class="name">Team Antigua Island Girls World’s Toughest Row 2023</span>
+            <span class="role">Technical Production Partner</span>
+            <span class="des">Produced performance gear designed by Jordan Jackson (Amen Amen US) for Team Antigua’s transatlantic row, ensuring functionality, durability, and technical precision.</span>
+          </div>
+          <div class="project-image">
+            <img src="TA.jpg">
+          </div>
+        </div>    
+    
+<div class="projects-container">
+        <div class="project-card">
+          <div class="project-title">
+            <span class="name">Grassfields UK RTW Collections (2020–2023)</span>
+            <span class="role">Production Partner</span>
+            <span class="des">Oversaw end-to-end production for multiple collections, maintaining international quality standards and brand consistency for the UK-based Afro-fusion label.</span>
+          </div>
+          <div class="project-image">
+             <img src="GF.webp">           
+          </div>
+        </div>
+                
+        <div class="project-card">
+          <div class="project-title">
+            <span class="name">Roots Ghana 2024 African Fashion Warehouse</span>
+            <span class="role">Product Curator & Speaker</span>
+            <span class="des">Showcased African designer and artisan products to buyers and spoke on a panel about Pan-African fashion trade and global market access.</span>
+          </div>
+          <div class="project-image">
+            <img src="RG.jpeg">
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
 </body>
 </html>
